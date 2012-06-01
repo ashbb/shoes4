@@ -2,7 +2,9 @@ require 'java'
 require 'swt'
 
 module Shoes
-  module Swt
+  module Swt; end
+  def self.display
+    @display ||= ::Swt::Widgets::Display.new
   end
 end
 

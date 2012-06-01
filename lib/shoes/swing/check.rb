@@ -1,5 +1,5 @@
-module Shoes::Swing::Check
-  def gui_init_open app
+class Shoes::Swing::Check
+  def initialize app
     @real = 'create Swing object'
   end
   attr_accessor :real

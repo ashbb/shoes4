@@ -7,7 +7,7 @@ module Shoes
     include Shoes::ElementMethods
     
     def initialize &blk
-      @gui = Shoes.backend::App.new(Swt.display)
+      @gui = Shoes.backend::App.new
       instance_eval &blk
       @gui.open
     end

@@ -1,6 +1,6 @@
 class Shoes::Swt::App
-  def initialize(display)
-    @shell = Swt::Widgets::Shell.new display
+  def initialize
+    @shell = Swt::Widgets::Shell.new Shoes.display
   end
     
   attr_reader :shell

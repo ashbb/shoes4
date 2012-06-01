@@ -1,11 +1,11 @@
-module Shoes::Swing::App
-  def gui_init
+class Shoes::Swing::App
+  def initialize
     @shell = 'create Swing object'
   end
     
   attr_reader :shell
     
-  def gui_open
+  def open
     # bla bla bla
   end
 end
