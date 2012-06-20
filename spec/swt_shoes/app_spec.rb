@@ -6,6 +6,7 @@ describe Shoes::Swt::App do
                      :setSize => true, :setText => true,
                      :addListener => true, :setLayout => true, 
                      :setBackground => true, :open => true,
+		     :background_mode= => true,
                      :set_image => true) }
 
   before :each do
