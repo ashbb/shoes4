@@ -7,7 +7,7 @@ module Shoes
     attr_reader  :gui, :parent, :text
     attr_accessor :font_size, :width, :height, :left, :top
 
-    def initialize(parent, klass, text, font_size, opts = {})
+    def initialize(parent, text, font_size, opts = {})
       @parent = parent
       @app = opts[:app]
       @font_size = font_size
