@@ -14,14 +14,20 @@ module Shoes
       @text = text
 
       @gui = Shoes.configuration.backend_for(self, opts)
+      if text.split.length == 1
+        @width, @height = @gui.get_size
+        @fixed = true
+      end
       @parent.add_child self
     end
     
     alias :_positioning :positioning
     
     def positioning x, y, max
-      @width = (@left.to_i + @parent.width <= @app.width) ? @parent.width : @app.width - @left.to_i
-      @height = @gui.get_height
+      unless @fixed
+        @width = (@left.to_i + @parent.width <= @app.width) ? @parent.width : @app.width - @left.to_i
+        @height = @gui.get_height
+      end
       _positioning x, y, max
     end
   end

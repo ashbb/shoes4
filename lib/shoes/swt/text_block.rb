@@ -22,6 +22,13 @@ module Shoes
         tl.setWidth @dsl.width
         tl.getBounds(0, @dsl.text.length - 1).height
       end
+      
+      def get_size
+        tl = ::Swt::TextLayout.new Shoes.display
+        tl.setText @dsl.text
+        gb = tl.getBounds(0, @dsl.text.length - 1)
+        return gb.width, gb.height
+      end
 
       private
 
